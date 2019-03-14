@@ -1,0 +1,8 @@
+empresa_departamento:
+    path: /ldepartamento
+    defaults: { _controller : 'ModeloBundle:Departamento:listDepartamento'}
+    methods: POST
+empresa_ciudad:
+    path: /lciudad
+    defaults: { _controller : 'ModeloBundle:Ciudad:listCiudad'}
+    methods: POST

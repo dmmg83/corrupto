@@ -1,0 +1,44 @@
+ModeloBundle\Entity\Tpublicacion:
+    type: entity
+    table: tpublicacion
+    indexes:
+        fkidusuario:
+            columns:
+                - fkidusuario
+    id:
+        pkidpublicacion:
+            type: bigint
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        fkidusuario:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+        cobrado:
+            type: boolean
+            nullable: false
+        cancelado:
+            type: boolean
+            nullable: false
+        postid:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+        alazar:
+            type: boolean
+            nullable: false
+        createdat:
+            type: datetime
+            nullable: true
+        updatedat:
+            type: datetime
+            nullable: true
+    lifecycleCallbacks: {  }

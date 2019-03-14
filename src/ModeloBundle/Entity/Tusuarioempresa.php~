@@ -1,0 +1,134 @@
+<?php
+
+namespace ModeloBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Tusuarioempresa
+ *
+ * @ORM\Table(name="tusuarioempresa", indexes={@ORM\Index(name="fkidusuario", columns={"fkidusuario"}), @ORM\Index(name="fkidempresa", columns={"fkidempresa"})})
+ * @ORM\Entity
+ */
+class Tusuarioempresa
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="pkidtusuarioempresa", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $pkidtusuarioempresa;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="control", type="string", length=1, nullable=true)
+     */
+    private $control;
+
+    /**
+     * @var \Tempresa
+     *
+     * @ORM\ManyToOne(targetEntity="Tempresa")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="fkidempresa", referencedColumnName="pkidempresa")
+     * })
+     */
+    private $fkidempresa;
+
+    /**
+     * @var \Tusuario
+     *
+     * @ORM\ManyToOne(targetEntity="Tusuario")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="fkidusuario", referencedColumnName="pkidusuario")
+     * })
+     */
+    private $fkidusuario;
+
+
+
+    /**
+     * Get pkidtusuarioempresa
+     *
+     * @return integer
+     */
+    public function getPkidtusuarioempresa()
+    {
+        return $this->pkidtusuarioempresa;
+    }
+
+    /**
+     * Set control
+     *
+     * @param string $control
+     *
+     * @return Tusuarioempresa
+     */
+    public function setControl($control)
+    {
+        $this->control = $control;
+
+        return $this;
+    }
+
+    /**
+     * Get control
+     *
+     * @return string
+     */
+    public function getControl()
+    {
+        return $this->control;
+    }
+
+    /**
+     * Set fkidempresa
+     *
+     * @param \ModeloBundle\Entity\Tempresa $fkidempresa
+     *
+     * @return Tusuarioempresa
+     */
+    public function setFkidempresa(\ModeloBundle\Entity\Tempresa $fkidempresa = null)
+    {
+        $this->fkidempresa = $fkidempresa;
+
+        return $this;
+    }
+
+    /**
+     * Get fkidempresa
+     *
+     * @return \ModeloBundle\Entity\Tempresa
+     */
+    public function getFkidempresa()
+    {
+        return $this->fkidempresa;
+    }
+
+    /**
+     * Set fkidusuario
+     *
+     * @param \ModeloBundle\Entity\Tusuario $fkidusuario
+     *
+     * @return Tusuarioempresa
+     */
+    public function setFkidusuario(\ModeloBundle\Entity\Tusuario $fkidusuario = null)
+    {
+        $this->fkidusuario = $fkidusuario;
+
+        return $this;
+    }
+
+    /**
+     * Get fkidusuario
+     *
+     * @return \ModeloBundle\Entity\Tusuario
+     */
+    public function getFkidusuario()
+    {
+        return $this->fkidusuario;
+    }
+}

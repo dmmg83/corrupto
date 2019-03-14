@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Ttipocupon" table="ttipocupon">
+    <id name="pkidtipocupon" type="integer" column="pkidTipocupon">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="nombretipocupon" type="string" column="NombreTipocupon" length="100" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="iconotipocupon" type="string" column="IconoTipocupon" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="activotipocupon" type="boolean" column="ActivoTipocupon" nullable="false"/>
+  </entity>
+</doctrine-mapping>

@@ -1,0 +1,20 @@
+empresacupon_new:
+    path: /new
+    defaults: { _controller : 'ModeloBundle:Empresacupon:newEmpresacupon'}
+    methods: POST
+empresacupon_list:
+    path: /list
+    defaults: { _controller : 'ModeloBundle:Empresacupon:listEmpresacupon'}
+    methods: POST
+empresacupon_edit:
+    path: /edit
+    defaults: { _controller : 'ModeloBundle:Empresacupon:editEmpresacupon'}
+    methods: POST
+empresacupon_remove:
+    path: /remove
+    defaults: { _controller : 'ModeloBundle:Empresacupon:removeEmpresacupon'}
+    methods: POST
+empresacupon_getpremio:
+    path: /getpremio
+    defaults: { _controller : 'ModeloBundle:Empresacupon:getPremio'}
+    methods: POST

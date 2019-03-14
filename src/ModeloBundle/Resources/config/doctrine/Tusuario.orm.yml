@@ -1,0 +1,59 @@
+ModeloBundle\Entity\Tusuario:
+    type: entity
+    table: tusuario
+    id:
+        pkidusuario:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        nombre:
+            type: string
+            nullable: false
+            length: 200
+            options:
+                fixed: false
+        telefono:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+        activousuario:
+            type: boolean
+            nullable: false
+        vidas:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        ultimapublicacion:
+            type: datetime
+            nullable: true
+        edad:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+        updatedat:
+            type: datetime
+            nullable: true
+        imei:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+        codigo:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        createdat:
+            type: datetime
+            nullable: true
+    lifecycleCallbacks: {  }

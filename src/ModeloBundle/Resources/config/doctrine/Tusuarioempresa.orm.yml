@@ -1,0 +1,31 @@
+ModeloBundle\Entity\Tusuarioempresa:
+    type: entity
+    table: tusuarioempresa
+    indexes:
+        fkidusuario:
+            columns:
+                - fkidusuario
+        fkidempresa:
+            columns:
+                - fkidempresa
+    id:
+        fkidusuario:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+        fkidempresa:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+    fields:
+        control:
+            type: string
+            nullable: true
+            length: 1
+            options:
+                fixed: false
+    lifecycleCallbacks: {  }

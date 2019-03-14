@@ -1,0 +1,14 @@
+tusuarioempresa_new:
+    path: /new
+    defaults: { _controller : 'ModeloBundle:Tusuarioempresa:new'}
+    methods: POST
+
+tusuarioempresa_list:
+    path: /list
+    defaults: { _controller : 'ModeloBundle:Tusuarioempresa:list'}
+    methods: POST
+
+tusuarioempresa_remove:
+    path: /remove/{fkidempresa}
+    defaults: { _controller : 'ModeloBundle:Tusuarioempresa:remove',fkidempresa:null}
+    methods: POST

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Tcategoriaempresa" table="tcategoriaempresa">
+    <indexes>
+      <index name="fkidempresa" columns="fkidempresa"/>
+      <index name="fkidcategoria" columns="fkidcategoria"/>
+    </indexes>
+    <id name="pkidcategoriaemoresa" type="integer" column="pkidcategoriaemoresa">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <many-to-one field="fkidcategoria" target-entity="Ttipocategoria" fetch="LAZY">
+      <join-columns>
+        <join-column name="fkidcategoria" referenced-column-name="pkidtipocategoria"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="fkidempresa" target-entity="Tempresa" fetch="LAZY">
+      <join-columns>
+        <join-column name="fkidempresa" referenced-column-name="pkidempresa"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

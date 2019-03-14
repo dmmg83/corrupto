@@ -1,0 +1,30 @@
+ModeloBundle\Entity\Tconfiguracion:
+    type: entity
+    table: tconfiguracion
+    id:
+        clave:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        valor:
+            type: string
+            nullable: false
+            length: 300
+            options:
+                fixed: false
+        fechacambio:
+            type: datetime
+            nullable: false
+        valoranterior:
+            type: string
+            nullable: false
+            length: 300
+            options:
+                fixed: false
+    lifecycleCallbacks: {  }

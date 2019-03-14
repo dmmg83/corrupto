@@ -1,0 +1,154 @@
+ModeloBundle\Entity\Tempresa:
+    type: entity
+    table: tempresa
+    indexes:
+        fkiddepartamento:
+            columns:
+                - fkiddepartamento
+        fkidciudad:
+            columns:
+                - fkidciudad
+    id:
+        pkidempresa:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        fkiddepartamento:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        fkidciudad:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        usuario:
+            type: string
+            nullable: true
+            length: 200
+            options:
+                fixed: false
+        clave:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        nit:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+        nombre:
+            type: string
+            nullable: true
+            length: 200
+            options:
+                fixed: false
+        direccion:
+            type: string
+            nullable: true
+            length: 120
+            options:
+                fixed: false
+        telefonos:
+            type: string
+            nullable: true
+            length: 60
+            options:
+                fixed: false
+        descripcion:
+            type: string
+            nullable: true
+            length: 110
+            options:
+                fixed: false
+        activoempresa:
+            type: boolean
+            nullable: false
+            options:
+                default: '1'
+        cuentaconfirmada:
+            type: boolean
+            nullable: false
+            options:
+                default: '0'
+        createdat:
+            type: datetime
+            nullable: true
+        cuponespermitidos:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                default: '1'
+        logo:
+            type: boolean
+            nullable: true
+        tienecupones:
+            type: boolean
+            nullable: false
+            options:
+                default: '0'
+        catsalud:
+            type: boolean
+            nullable: false
+            options:
+                default: '0'
+        catmascotas:
+            type: boolean
+            nullable: false
+            options:
+                default: '0'
+        catropa:
+            type: boolean
+            nullable: false
+            options:
+                default: '0'
+        cathogar:
+            type: boolean
+            nullable: false
+            options:
+                default: '0'
+        cattecnologia:
+            type: boolean
+            nullable: false
+            options:
+                default: '0'
+        catvehiculos:
+            type: boolean
+            nullable: false
+            options:
+                default: '0'
+        cattiendas:
+            type: boolean
+            nullable: false
+            options:
+                default: '0'
+        catrestaurantes:
+            type: boolean
+            nullable: false
+            options:
+                default: '0'
+        shakes:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                default: '0'
+        saldototal:
+            type: boolean
+            nullable: false
+            options:
+                default: '0'
+        updatedat:
+            type: datetime
+            nullable: true
+    lifecycleCallbacks: {  }

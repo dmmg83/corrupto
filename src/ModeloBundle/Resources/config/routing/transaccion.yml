@@ -1,0 +1,13 @@
+transaccin_new:
+    path: /new
+    defaults: { _controller : 'ModeloBundle:Transaccion:newTransaccion'}
+    methods: POST
+transaccin_list:
+    path: /list
+    defaults: { _controller : 'ModeloBundle:Transaccion:listTransaccion'}
+    methods: POST
+    
+transaccin_eror:
+    path: /error
+    defaults: { _controller : 'ModeloBundle:TransaccionError:newTransaccionError'}
+    methods: POST

@@ -1,0 +1,10 @@
+php bin/console doctrine:mapping:convert xml ./src/ModeloBundle/Entity/metadata/orm --force --from-database 
+php bin/console doctrine:mapping:import --force ModeloBundle annotation 
+php bin/console doctrine:generate:entities ModeloBundle 
+
+agregar en las tablas que tengan createad y updateat:
+@ORM\HasLifecycleCallbacks()
+
+use \ModeloBundle\Traits\PrePersistTrait;
+    use \ModeloBundle\Traits\PreUpdateTrait;
+    use \ModeloBundle\Traits\GeneralTrait;

@@ -1,0 +1,10 @@
+tipocupon_index:
+    path: /
+    defaults: { _controller : 'ModeloBundle:Tipocupon:index'}
+    methods: GET
+
+tipocupon_list:
+    path: /list
+    defaults: { _controller : 'ModeloBundle:Tipocupon:lisTipocupon'}
+    methods: POST
+

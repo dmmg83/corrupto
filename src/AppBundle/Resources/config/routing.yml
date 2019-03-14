@@ -1,0 +1,43 @@
+app_default:
+    resource: '@AppBundle/Resources/config/routing/default.yml'
+    prefix: /
+
+app_user:
+    resource: '@AppBundle/Resources/config/routing/user.yml'
+    prefix: /user
+
+app_historial_jugadas:
+    resource: '@AppBundle/Resources/config/routing/historialjugadas.yml'
+    prefix: /historialjugadas
+    
+app_login:
+    resource: '@AppBundle/Resources/config/routing/login.yml'
+    prefix: /login
+
+app_tusuarioempresa:
+    resource: '@AppBundle/Resources/config/routing/tusuarioempresa.yml'
+    prefix: /tusuarioempresa
+modelo_empresa:
+    resource: '@ModeloBundle/Resources/config/routing/empresa.yml'
+    prefix: /empresa
+modelo_tipocupon:
+    resource: '@ModeloBundle/Resources/config/routing/tipocupon.yml'
+    prefix: /tipocupon
+modelo_empresacupon:
+    resource: '@ModeloBundle/Resources/config/routing/empresacupon.yml'
+    prefix: /empresacupon
+modelo_transaccion:
+    resource: '@ModeloBundle/Resources/config/routing/transaccion.yml'
+    prefix: /transaccion
+
+modelo_departamento:
+    resource: '@ModeloBundle/Resources/config/routing/departamentoCiudad.yml'
+    prefix: /departamento
+
+modelo_publicacion:
+    resource: '@ModeloBundle/Resources/config/routing/publicacion.yml'
+    prefix: /publicacion
+
+modelo_validacion:
+    resource: '@ModeloBundle/Resources/config/routing/validacionToken.yml'
+    prefix: /validacion

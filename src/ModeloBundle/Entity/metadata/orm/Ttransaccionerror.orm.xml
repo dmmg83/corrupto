@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Ttransaccionerror" table="ttransaccionerror">
+    <id name="pkiderror" type="bigint" column="pkiderror">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="fkidtransaccion" type="bigint" column="fkidtransaccion" nullable="true">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="error" type="string" column="error" length="500" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="createdat" type="datetime" column="createdat" nullable="true"/>
+  </entity>
+</doctrine-mapping>

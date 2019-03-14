@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Tusuarioempresa" table="tusuarioempresa">
+    <indexes>
+      <index name="fkidusuario" columns="fkidusuario"/>
+      <index name="fkidempresa" columns="fkidempresa"/>
+    </indexes>
+    <id name="pkidtusuarioempresa" type="integer" column="pkidtusuarioempresa">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="control" type="string" column="control" length="1" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <many-to-one field="fkidempresa" target-entity="Tempresa" fetch="LAZY">
+      <join-columns>
+        <join-column name="fkidempresa" referenced-column-name="pkidempresa"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="fkidusuario" target-entity="Tusuario" fetch="LAZY">
+      <join-columns>
+        <join-column name="fkidusuario" referenced-column-name="pkidusuario"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

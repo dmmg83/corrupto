@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Tempresacupon" table="tempresacupon">
+    <indexes>
+      <index name="empresacupon" columns="fkidempresa"/>
+    </indexes>
+    <id name="pkidempresacupon" type="bigint" column="pkidempresacupon">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="fkidtipocupon" type="string" column="fkidtipocupon" length="1" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="imagenpremio" type="string" column="imagenpremio" length="500" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="existencias" type="integer" column="existencias" nullable="false">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="sobran" type="integer" column="sobran" nullable="false">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="tiempo" type="integer" column="tiempo" nullable="false">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="premio" type="string" column="premio" length="100" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="condicioncupon" type="string" column="condicioncupon" length="100" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="activocupon" type="boolean" column="activocupon" nullable="false"/>
+    <field name="createdat" type="datetime" column="createdat" nullable="true"/>
+    <field name="updatedat" type="datetime" column="updatedat" nullable="true"/>
+    <many-to-one field="fkidempresa" target-entity="Tempresa" fetch="LAZY">
+      <join-columns>
+        <join-column name="fkidempresa" referenced-column-name="pkidempresa"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

@@ -1,0 +1,9 @@
+historial_jugadas_new:
+    path: /new
+    defaults: { _controller : 'ModeloBundle:Historialjugadas:new'}
+    methods: POST
+
+historial_jugadas_list:
+    path: /list
+    defaults: { _controller : 'ModeloBundle:Historialjugadas:list'}
+    methods: POST

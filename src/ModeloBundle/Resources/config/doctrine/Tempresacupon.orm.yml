@@ -1,0 +1,74 @@
+ModeloBundle\Entity\Tempresacupon:
+    type: entity
+    table: tempresacupon
+    indexes:
+        fkidempresa:
+            columns:
+                - fkidempresa
+        fkidtipocupon:
+            columns:
+                - fkidtipocupon
+    id:
+        pkidempresacupon:
+            type: bigint
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        fkidempresa:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+        fkidtipocupon:
+            type: string
+            nullable: false
+            length: 1
+            options:
+                fixed: false
+        imagenpremio:
+            type: string
+            nullable: true
+            length: 500
+            options:
+                fixed: false
+        existencias:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+        sobran:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+        tiempo:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+        premio:
+            type: string
+            nullable: false
+            length: 100
+            options:
+                fixed: false
+        condicioncupon:
+            type: string
+            nullable: false
+            length: 100
+            options:
+                fixed: false
+        activocupon:
+            type: boolean
+            nullable: false
+        createdat:
+            type: datetime
+            nullable: true
+        updatedat:
+            type: datetime
+            nullable: true
+    lifecycleCallbacks: {  }

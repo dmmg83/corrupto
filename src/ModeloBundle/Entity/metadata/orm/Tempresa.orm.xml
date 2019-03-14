@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Tempresa" table="tempresa">
+    <indexes>
+      <index name="fkiddepartamento" columns="fkiddepartamento"/>
+      <index name="fkidciudad" columns="fkidciudad"/>
+    </indexes>
+    <id name="pkidempresa" type="integer" column="pkidempresa">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="fkiddepartamento" type="integer" column="fkiddepartamento" nullable="true">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="fkidciudad" type="integer" column="fkidciudad" nullable="true">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="usuario" type="string" column="usuario" length="200" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="clave" type="string" column="clave" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="nit" type="string" column="nit" length="50" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="nombre" type="string" column="nombre" length="200" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="direccion" type="string" column="direccion" length="120" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="telefonos" type="string" column="telefonos" length="60" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="descripcion" type="string" column="descripcion" length="110" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="activoempresa" type="boolean" column="activoempresa" nullable="false">
+      <options>
+        <option name="default">1</option>
+      </options>
+    </field>
+    <field name="cuentaconfirmada" type="boolean" column="cuentaconfirmada" nullable="false">
+      <options>
+        <option name="default">0</option>
+      </options>
+    </field>
+    <field name="createdat" type="datetime" column="createdat" nullable="true"/>
+    <field name="cuponespermitidos" type="integer" column="cuponespermitidos" nullable="false">
+      <options>
+        <option name="unsigned"/>
+        <option name="default">1</option>
+      </options>
+    </field>
+    <field name="logo" type="boolean" column="logo" nullable="true"/>
+    <field name="tienecupones" type="boolean" column="tienecupones" nullable="false">
+      <options>
+        <option name="default">0</option>
+      </options>
+    </field>
+    <field name="catsalud" type="boolean" column="catsalud" nullable="false">
+      <options>
+        <option name="default">0</option>
+      </options>
+    </field>
+    <field name="catmascotas" type="boolean" column="catmascotas" nullable="false">
+      <options>
+        <option name="default">0</option>
+      </options>
+    </field>
+    <field name="catropa" type="boolean" column="catropa" nullable="false">
+      <options>
+        <option name="default">0</option>
+      </options>
+    </field>
+    <field name="cathogar" type="boolean" column="cathogar" nullable="false">
+      <options>
+        <option name="default">0</option>
+      </options>
+    </field>
+    <field name="cattecnologia" type="boolean" column="cattecnologia" nullable="false">
+      <options>
+        <option name="default">0</option>
+      </options>
+    </field>
+    <field name="catvehiculos" type="boolean" column="catvehiculos" nullable="false">
+      <options>
+        <option name="default">0</option>
+      </options>
+    </field>
+    <field name="cattiendas" type="boolean" column="cattiendas" nullable="false">
+      <options>
+        <option name="default">0</option>
+      </options>
+    </field>
+    <field name="catrestaurantes" type="boolean" column="catrestaurantes" nullable="false">
+      <options>
+        <option name="default">0</option>
+      </options>
+    </field>
+    <field name="shakes" type="integer" column="shakes" nullable="false">
+      <options>
+        <option name="unsigned"/>
+        <option name="default">0</option>
+      </options>
+    </field>
+    <field name="saldototal" type="boolean" column="saldototal" nullable="false">
+      <options>
+        <option name="default">0</option>
+      </options>
+    </field>
+    <field name="updatedat" type="datetime" column="updatedat" nullable="true"/>
+  </entity>
+</doctrine-mapping>

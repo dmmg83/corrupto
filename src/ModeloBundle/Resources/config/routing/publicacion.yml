@@ -1,0 +1,13 @@
+publicacion_new:
+    path: /new
+    defaults: { _controller : 'ModeloBundle:Publicacion:newPublicacion'}
+    methods: POST
+publicacion_list:
+    path: /list
+    defaults: { _controller : 'ModeloBundle:Publicacion:listPublicacion'}
+    methods: POST
+    
+publicacion_eror:
+    path: /edit
+    defaults: { _controller : 'ModeloBundle:Publicacion:editPublicacion'}
+    methods: POST

@@ -1,0 +1,31 @@
+ModeloBundle\Entity\Tcategoriaempresa:
+    type: entity
+    table: tcategoriaempresa
+    indexes:
+        fkidempresa:
+            columns:
+                - fkidempresa
+        fkidcategoria:
+            columns:
+                - fkidcategoria
+    id:
+        pkidcategoriaemoresa:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        fkidcategoria:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+        fkidempresa:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+    lifecycleCallbacks: {  }

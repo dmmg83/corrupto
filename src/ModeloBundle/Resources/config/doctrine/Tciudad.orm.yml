@@ -1,0 +1,29 @@
+ModeloBundle\Entity\Tciudad:
+    type: entity
+    table: tciudad
+    indexes:
+        fkiddepartamento:
+            columns:
+                - fkiddepartamento
+    id:
+        pkidciudad:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        fkiddepartamento:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+        nombreciudad:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+    lifecycleCallbacks: {  }

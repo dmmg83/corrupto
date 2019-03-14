@@ -1,0 +1,28 @@
+ModeloBundle\Entity\Ttransaccionerror:
+    type: entity
+    table: ttransaccionerror
+    id:
+        pkiderror:
+            type: bigint
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        idtransaccion:
+            type: bigint
+            nullable: true
+            options:
+                unsigned: false
+        error:
+            type: string
+            nullable: true
+            length: 500
+            options:
+                fixed: false
+        createdat:
+            type: datetime
+            nullable: true
+    lifecycleCallbacks: {  }

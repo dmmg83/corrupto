@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Ttransaccion" table="ttransaccion">
+    <indexes>
+      <index name="fkidempresa" columns="fkidempresa"/>
+      <index name="fkidusuario" columns="fkidusuario"/>
+    </indexes>
+    <id name="pkidtransaccion" type="bigint" column="pkidtransaccion">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="createdat" type="datetime" column="createdat" nullable="false"/>
+    <field name="fecharta" type="datetime" column="fecharta" nullable="true"/>
+    <field name="transaccionid" type="string" column="transaccionid" length="50" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="referencia1" type="string" column="referencia1" length="50" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="referencia2" type="string" column="referencia2" length="50" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="detalle" type="string" column="detalle" length="100" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="franquicia" type="string" column="franquicia" length="20" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="valor" type="string" column="valor" length="10" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="respuesta" type="string" column="respuesta" length="15" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="codrespuesta" type="string" column="codrespuesta" length="10" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="codaprobacion" type="string" column="codaprobacion" length="20" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="tipodoc" type="string" column="tipodoc" length="4" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="doc" type="string" column="doc" length="20" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="nombre" type="string" column="nombre" length="100" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="apellido" type="string" column="apellido" length="100" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="telefono" type="string" column="telefono" length="20" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="direccion" type="string" column="direccion" length="150" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="razonrespuesta" type="string" column="razonrespuesta" length="500" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="fechatransac" type="string" column="fechatransac" length="20" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="codigoerror" type="string" column="codigoerror" length="10" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="extra1" type="string" column="extra1" length="10" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="extra2" type="string" column="extra2" length="10" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="origen" type="string" column="origen" length="200" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="updatedat" type="datetime" column="updatedat" nullable="true"/>
+    <many-to-one field="fkidempresa" target-entity="Tempresa" fetch="LAZY">
+      <join-columns>
+        <join-column name="fkidempresa" referenced-column-name="pkidempresa"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="fkidusuario" target-entity="Tusuario" fetch="LAZY">
+      <join-columns>
+        <join-column name="fkidusuario" referenced-column-name="pkidusuario"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

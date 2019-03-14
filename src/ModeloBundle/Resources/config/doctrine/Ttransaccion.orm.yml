@@ -1,0 +1,166 @@
+ModeloBundle\Entity\Ttransaccion:
+    type: entity
+    table: ttransaccion
+    indexes:
+        fkidempresa:
+            columns:
+                - fkidempresa
+        fkidusuario:
+            columns:
+                - fkidusuario
+    id:
+        pkidtransaccion:
+            type: bigint
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        fkidempresa:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        fkidusuario:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        createdat:
+            type: datetime
+            nullable: false
+        fecharta:
+            type: datetime
+            nullable: true
+        transaccionid:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+        referencia1:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+        referencia2:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+        detalle:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+        franquicia:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+        valor:
+            type: string
+            nullable: true
+            length: 10
+            options:
+                fixed: false
+        respuesta:
+            type: string
+            nullable: true
+            length: 15
+            options:
+                fixed: false
+        codrespuesta:
+            type: string
+            nullable: true
+            length: 10
+            options:
+                fixed: false
+        codaprobacion:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+        tipodoc:
+            type: string
+            nullable: true
+            length: 4
+            options:
+                fixed: false
+        doc:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+        nombre:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+        apellido:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+        telefono:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+        direccion:
+            type: string
+            nullable: true
+            length: 150
+            options:
+                fixed: false
+        razonrespuesta:
+            type: string
+            nullable: true
+            length: 500
+            options:
+                fixed: false
+        fechatransac:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+        codigoerror:
+            type: string
+            nullable: true
+            length: 10
+            options:
+                fixed: false
+        extra1:
+            type: string
+            nullable: true
+            length: 10
+            options:
+                fixed: false
+        extra2:
+            type: string
+            nullable: true
+            length: 10
+            options:
+                fixed: false
+        origen:
+            type: string
+            nullable: true
+            length: 200
+            options:
+                fixed: false
+        updatedat:
+            type: datetime
+            nullable: true
+    lifecycleCallbacks: {  }

@@ -1,0 +1,19 @@
+user_new:
+    path: /new
+    defaults: { _controller : 'ModeloBundle:User:new'}
+    methods: POST
+
+user_edit:
+    path: /edit
+    defaults: { _controller : 'ModeloBundle:User:edit'}
+    methods: POST
+
+user_detail:
+    path: /detail/{id}
+    defaults: { _controller : 'ModeloBundle:User:user',id:null}
+    methods: POST
+
+user_confirm:
+    path: /confirm
+    defaults: { _controller : 'ModeloBundle:User:activarUsuario'}
+    methods: POST

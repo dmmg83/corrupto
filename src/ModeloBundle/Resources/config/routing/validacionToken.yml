@@ -1,0 +1,8 @@
+validacion_token:
+    path: /token
+    defaults: { _controller : 'ModeloBundle:Validaciontoken:query'}
+    methods: POST
+validacion_pago:
+    path: /pago
+    defaults: { _controller : 'ModeloBundle:Validationtoken:confirmarTransaccion'}
+    methods: POST

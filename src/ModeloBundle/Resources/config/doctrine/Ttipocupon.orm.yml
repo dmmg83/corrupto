@@ -1,0 +1,33 @@
+ModeloBundle\Entity\Ttipocupon:
+    type: entity
+    table: ttipocupon
+    id:
+        pkidtipocupon:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: pkidTipocupon
+            generator:
+                strategy: IDENTITY
+    fields:
+        nombretipocupon:
+            type: string
+            nullable: false
+            length: 100
+            options:
+                fixed: false
+            column: NombreTipocupon
+        iconotipocupon:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: IconoTipocupon
+        activotipocupon:
+            type: boolean
+            nullable: false
+            column: ActivoTipocupon
+    lifecycleCallbacks: {  }

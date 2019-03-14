@@ -1,0 +1,34 @@
+empresa_index:
+    path: /
+    defaults: { _controller : 'ModeloBundle:Empresa:index'}
+    methods: GET
+
+empresa_new:
+    path: /new
+    defaults: { _controller : 'ModeloBundle:Empresa:newEmpresa'}
+    methods: POST
+
+empresa_edit:
+    path: /edit
+    defaults: { _controller : 'ModeloBundle:Empresa:editEmpresa'}
+    methods: POST
+
+empresa_list:
+    path: /list
+    defaults: { _controller : 'ModeloBundle:Empresa:listEmpresas'}
+    methods: POST
+    
+empresa_remove:
+    path: /remove
+    defaults: { _controller : 'ModeloBundle:Empresa:removeEmpresa'}
+    methods: POST
+
+empresa_buscar:
+    path: /buscar
+    defaults: { _controller : 'ModeloBundle:Empresa:buscarEmpresa'}
+    methods: POST
+
+empresa_validar:
+    path: /validar
+    defaults: { _controller : 'ModeloBundle:Empresa:validarCamposEmpresa'}
+    methods: POST

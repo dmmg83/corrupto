@@ -1,0 +1,8 @@
+user_login:
+    path: /user
+    defaults: { _controller : 'ModeloBundle:LoginUser:login'}
+    methods: POST
+login_empresa:
+    path: /empresa
+    defaults: { _controller : 'ModeloBundle:Login:login'}
+    methods: POST

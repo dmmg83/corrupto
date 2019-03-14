@@ -1,0 +1,25 @@
+ModeloBundle\Entity\Ttipocategoria:
+    type: entity
+    table: ttipocategoria
+    id:
+        pkidtipocategoria:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        nombretipocategoria:
+            type: string
+            nullable: false
+            length: 100
+            options:
+                fixed: false
+            column: Nombretipocategoria
+        activotipocategoria:
+            type: boolean
+            nullable: false
+            column: Activotipocategoria
+    lifecycleCallbacks: {  }

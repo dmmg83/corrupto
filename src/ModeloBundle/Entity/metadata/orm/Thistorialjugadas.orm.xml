@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Thistorialjugadas" table="thistorialjugadas">
+    <indexes>
+      <index name="fkidempresa" columns="fkidempresa"/>
+      <index name="fkiduduario" columns="fkidusuario"/>
+      <index name="thistorialjugadas_ibfk_3" columns="fkidcupon"/>
+    </indexes>
+    <id name="pkidhistorial" type="bigint" column="pkidhistorial">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="premio" type="string" column="premio" length="100" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="condicion" type="string" column="condicion" length="100" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="createdat" type="datetime" column="createdat" nullable="false"/>
+    <field name="vence" type="datetime" column="vence" nullable="true"/>
+    <field name="tipo" type="string" column="tipo" length="1" nullable="false">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <many-to-one field="fkidusuario" target-entity="Tusuario" fetch="LAZY">
+      <join-columns>
+        <join-column name="fkidusuario" referenced-column-name="pkidusuario"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="fkidempresa" target-entity="Tempresa" fetch="LAZY">
+      <join-columns>
+        <join-column name="fkidempresa" referenced-column-name="pkidempresa"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="fkidcupon" target-entity="Tempresacupon" fetch="LAZY">
+      <join-columns>
+        <join-column name="fkidcupon" referenced-column-name="pkidempresacupon"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>
